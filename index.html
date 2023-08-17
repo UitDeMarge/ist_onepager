@@ -3,23 +3,224 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SamVZW Activiteit</title>
-</head>
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <title>Ieders Stem Telt</title>
+  <style>
+    body {
+      font-family: 'Calibri', sans-serif;
+      font-size: 1.2em;
+      margin: 0;
+      padding: 0;
+      color: black;
+    }
+   
+    header {
+      background-color: #dab7f5;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 1em;
+    }
 
-  <header style="background-color: #333; color: #fff; text-align: center; padding: 20px;">
-    <h1 style="margin: 0;">Lanceermoment: Ieders Stem Telt</h1>
-    <p>Datum: <span id="event-date">Vul hier de datum in</span></p>
+    header img {
+      max-width: 20%;
+      height: auto;
+    }
+
+    header .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header h2 {
+      opacity: 0;
+      transform: translateX(-200%);
+      font-size: 2.3em;
+      font-weight: 900;
+      animation: slideInRight 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+      animation-delay: 0.s;
+      margin: 0;
+      margin-left: 1em;
+      color: white;
+    }
+
+    header p {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    main {
+      padding: 2em;
+    }
+    h4, h5 {
+      text-transform: uppercase;
+      margin: 0 auto;
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1em;
+    }
+    .button {
+      display: inline-block;
+      font-weight: 700;
+      background-color: #dab7f5; 
+      color: black; 
+      padding: 10px 20px;
+      text-decoration: none; 
+      border-radius: 5px;
+      transition: transform 1s ease;
+    }
+    .button:hover {
+      transform: translateX(-5px) rotate(-5deg);
+    }
+    .button:hover {
+      transition: transform 2s ease;
+      animation: resetButton 2s ease forwards;
+    }
+
+    .container {
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    .centered-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+    }
+    .centered-image img {
+      max-width: 100%;
+      height: auto;
+      padding-top: 0.5em;
+    }
+    
+    .extra_info {
+      background-color: #dab7f5;
+      min-height: 5em;
+      margin-top: 1em;
+      padding: 1em;    
+    }
+    .extra_info h4,
+    .extra_info h5 {
+      margin-bottom: 0.2em;
+    }
+    .extra_info p {
+      margin-top: 0;
+    }
+
+    .inline_link {
+      color: #006400;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .inline_link:hover {
+      color: black;
+    }
+
+    @keyframes slideInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes slideInRight {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes resetButton {
+      to {
+        transform: translateX(0) rotate(0);
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      main {
+        padding: 3em 10%;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .container {
+        flex-direction: column;
+        height: auto; 
+      }
+      .image-column {
+        margin-bottom: 2.2em;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="/Logo_Ieders_Stem_Telt.png" alt="Logo van Ieders Stem Telt">
+    <div class="title">
+      <h2>Lanceermoment</h2>
+      <p>15 september 2024</p>
+    </div>
   </header>
 
-  <main style="padding: 20px;">
-    <section id="event-description" style="margin-bottom: 20px;">
-      <p>Vul hier de beschrijving van de activiteit in.</p>
+  <main>
+    <section id="event-description">
+       <div class="container">
+    <div class="text-column">
+      <p>Op 15 september 2023 vieren we de Dag van de democratie. Een symbolische dag om Ieders Stem Telt 2024 voor te stellen. Ieders Stem Telt is hét verkiezingsproject van sociale middenveldorganisaties.</p>
+    </div>
+  </div>
+  <div class="button-container">
+    <a target="_blank" href="https://www.samvzw.be/activiteiten/lanceermoment-ieders-stem-telt"
+     class="button">Inschrijven</a>
+  </div>
+  <div>
+      <h3>2024 wordt een belangrijk verkiezingsjaar.</h3>
+      <p>In juni zijn er bovenlokale verkiezingen, en op zondag 13 oktober lokale verkiezingen (gemeenteraad, districtsraad en provincieraad).</p>
+      <p>2024 is ook het eerste jaar dat de opkomstplicht afgeschaft wordt. Dat brengt heel wat uitdagingen met zich mee. Vooral voor mensen in een maatschappelijk kwetsbare positie.</p>
+      <p><strong>Ieders Stem Telt is er voor sociale professionals en kernvrijwilligers die in de praktijk met hun doelgroepen aan de slag gaan rond de lokale verkiezingen.</strong></p>
+      <h3>Wat is Ieders Stem Telt?</h3>
+      <p>Ieders Stem Telt is een samenwerkingsverband van 22 organisaties, ondersteund door SAM, steunpunt Mens en Samenleving. Ieders Stem Telt streeft naar de participatie van alle groepen in de samenleving. Het streeft naar een sociaal rechtvaardige samenleving met een bijzondere aandacht voor mensen in een maatschappelijk kwetsbare positie.</p>
+      <h3>Wat biedt Ieders Stem Telt jou?</h3>
+      <p>Bij Ieders Stem Telt vind je ondersteuningsmateriaal om samen met je doelgroepen rond belangrijke vragen te werken in de context van de lokale verkiezingen.</p>
+      <p>Vragen die aan bod kunnen komen, zijn onder meer: Waarom is een stem uitbrengen belangrijk? Hoe breng je een stem uit? Hoe moet je je registreren om te gaan stemmen, mocht dat nodig zijn? Hoe bepaal je inhoudelijk waar je stem naartoe gaat? Hoe ga je in dialoog met elkaar en ‘de politiek’? Hoe zorg je ervoor dat ‘de stemmen’ van de doelgroep opgenomen worden in het nieuwe lokale beleid?</p>
+      <p>Om dat waar te maken, slaan 22 sociale middenveldorganisaties de handen in elkaar. 
+        Op 15 september 2023 stellen ze hun project voor.</p>
+      <h3>Op het programma</h3>
+      <ul>
+        <li>(Lokale) democratie is een spel van iedereen – doelgroepen aan het woord</li>
+        <li>Presentatie van het project ‘Ieders Stem Telt 2024’</li>
+        <li>Sofagesprek met inspirerende sprekers</li>
+      </ul>
+    </div>
     </section>
-    <a href="https://www.samvzw.be/activiteiten/lanceermoment-ieders-stem-telt"
-       style="display: inline-block; background-color: #007bff; color: #fff; padding: 10px 20px;
-              text-decoration: none; border-radius: 5px; transition: background-color 0.3s ease;"
+    <div class="button-container">
+      <a target="_blank" href="https://www.samvzw.be/activiteiten/lanceermoment-ieders-stem-telt"
        class="button">Inschrijven</a>
+    </div>
+    <div class="extra_info">
+      <h4>Praktisch</h4>
+      <h5>Voor wie?</h5>
+      <p>Je bent een sociale professional of kernvrijwilliger bij een sociale middenveldorganisatie die werkt met en voor mensen in een maatschappelijk kwetsbare positie.</p>
+      <h5>Wanneer?</h5>
+      <p>Vrijdag 15 september 2023, van 10 tot 12 uur. <br/>Onthaal vanaf 9.30 uur</p>
+      <h5>Waar?</h5>
+      <p>UAntwerpen <br />Stadscampus De Meerminne <br /> Sint-Jacobsstraat 2 <br /> 2000 Antwerpen <br /> Lokaal S.M.004</p>
+      <p><em>Inschrijven is gratis.</em><br /> Inschrijven is noodzakelijk en kan tot en met 14 september 2023.<br />Het aantal  plaatsen is beperkt. </p>
+      <h5>Meer weten?</h5>
+      <p>Neem contact op met <a class="inline_link" href="mailto:iedersstemtelt2024@gmail.com" target="_blank">iedersstemtelt2024@gmail.com</a></p>
+    </div>
+    <div  class="centered-image">
+      <img src="/logosVanPartners.png" alt="Logos van Partners">
+    </div>
   </main>
 
 </body>
